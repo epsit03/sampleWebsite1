@@ -3,12 +3,12 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Aaditya
+first_name: Epsit
 middle_name: 
-last_name: Ura
-email: aadityaura@gmail.com
+last_name: Bhardwaj
+email:epsitbhardwaj26@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Aaditya Ura | ML Researcher
+  Epsit Bhardwaj | ML Enthusiast
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -17,7 +17,7 @@ footer_text: >
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico #🎓 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://aadityaura.github.io # the base hostname & protocol for your site
+url: https://epsit03.github.io # the base hostname & protocol for your site
 baseurl: #/al-folio # the subpath of your site, e.g. /blog/
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -70,13 +70,13 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: monk1337 # your GitHub user name
+github_username: epsit03 # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: aadityaura # your Twitter handle
+twitter_username: EpsitB # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: aadityaura # your LinkedIn user name
+linkedin_username: epsit26 # your LinkedIn user name
 telegram_username: # your Telegram user name
-scholar_userid: MXqo0_UAAAAJ # your Google Scholar ID
+scholar_userid:  # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 orcid_id: # your ORCID ID
@@ -111,10 +111,10 @@ contact_note: >
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
 
-google_analytics: G-09S9K95MD5 # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics:  # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
-google_site_verification: -BO_S6ChfLrtygIHRRWdOiMoyOiDO91B3hNAFN88sFA # your google-site-verification ID (Google Search Console)
+google_site_verification:  # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
@@ -269,8 +269,8 @@ jekyll-archives:
 
 scholar:
 
-  last_name: [Pal]
-  first_name: [Ankit]
+  last_name: [Bhardwaj]
+  first_name: [Epsit]
 
   style: apa
   locale: en
