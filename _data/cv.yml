@@ -1,0 +1,91 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Ankit Kumar Pal (Aaditya)
+    #- name: Date of Birth
+    #  value: 14th March 1879
+    - name: Email
+      value: aadityaura [at] gmail [dot] com
+    - name: Languages
+      value: English, Hindi, Tamil(Novice)
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Bachelor of Technology, Computer Science Engineering
+      institution: Babu Banarasi Das University, Lucknow, India
+      
+      year: May 2017
+      description:
+       - Thesis; Generative Modeling of Music Sequences with LSTM-based RNN Architecture
+    - title: 12th - Board of High School and Intermediate Education U.P
+      institution: Anandi Devi S.V.M, Sitapur, India
+      year: April 2013
+      description:
+       - Major; Physics, Chemistry and Mathematics
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Senior ML Research Engineer
+      institution: Saama Technologies
+      year: 2018 - present
+      description:
+        - Adverse Event Prediction;  Developed RNN-LSTM with Context-Aware Attention for 98% F1 score in adverse event detection across 1M clinical records.
+        - Trial Plan Optimizer (TPO); Predicted site enrollment with AutoML in Python & Scala, leveraging Categorical Embeddings and tree-based algorithms.
+        - Unsupervised Medical Monitoring; Analyzed clinical trial data to identify patient outliers using unsupervised models such as Autoencoders and Clustering.
+        - DeepMap ML Framework (SDTM Automap); Achieved 95% accuracy in auto-generating CDISC SDTM mappings using GANs, Bidirectional LSTM, and multi-task learning.
+        - Pharma Graph; Built a GCNN model to predict drug interactions, representing drugs as nodes and interactions as edges.
+        - Large Language Models for Healthcare Domain; Extracted clinical insights using fine-tuned LLMs, developed a Python library for structured outputs, and researched LLM hallucinations mitigation.
+    - title: Deep Learning Engineer
+      institution: Prescience Decision Solutions
+      year: Feb 2018 - May 2018
+      description:
+        - Utilized transfer learning, attention methods, and custom POS-Tag embeddings.
+        - Developed an unofficial Twitter API for collecting Bitcoin-related tweets; performed LSTM sentiment analysis on them.
+        - Integrated sentiment analysis as a feature layer to enhance data comprehension in the primary model.
+        - Deployed the solution, establishing a Chat UI interface for real-time interaction with the model.
+    - title: Machine Learning Intern
+      institution: Fliptango Global Solutions
+      year: Dec 2017 – Feb 2018
+      description:
+        - Applied TensorFlow for transfer learning to fine-tune models for distinct tasks.
+        - Enhanced language comprehension by integrating Commonsense Embeddings from ConceptNet Numberbatch.
+        - Constructed a named entity recognition model in TensorFlow based on the BiLSTM-CNN-CRF approach, achieving 95% accuracy for extracting key entities from user chats.
+
+# - title: Open Source Projects
+#   type: time_table
+#   contents:
+#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#       year: 2015-now
+#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+
+# - title: Honors and Awards
+#   type: time_table
+#   contents:
+#     - year: 1921
+#       items: 
+#         - Nobel Prize in Physics 
+#         - Matteucci Medal
+#     - year: 2029
+#       items: 
+#         - Max Planck Medal
+
+# - title: Academic Interests
+#   type: nested_list
+#   contents:
+#     - title: Topic 1.
+#       items: 
+#         - Description 1.
+#         - Description 2.
+#     - title: Topic 2.
+#       items:
+#         - Description 1.
+#         - Description 2.
+
+# - title: Other Interests
+#   type: list
+#   contents:
+#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+
