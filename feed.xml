@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aadityaura.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aadityaura.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-03-07T18:48:03+00:00</updated><id>https://aadityaura.github.io/feed.xml</id><title type="html">blank</title><subtitle>Aaditya Ura | ML Researcher
+</subtitle><entry><title type="html">Quantized vs Distilled Neural Models: A Comparison</title><link href="https://aadityaura.github.io/blog/2023/Quantization_vs_Distillation/" rel="alternate" type="text/html" title="Quantized vs Distilled Neural Models: A Comparison" /><published>2023-11-01T00:00:00+00:00</published><updated>2023-11-01T00:00:00+00:00</updated><id>https://aadityaura.github.io/blog/2023/Quantization_vs_Distillation</id><content type="html" xml:base="https://aadityaura.github.io/blog/2023/Quantization_vs_Distillation/"><![CDATA[<p>Deep learning models, especially those with vast parameters, pose challenges for deployment in resource-constrained environments. Two popular techniques, quantization and distillation, address this issue, aiming to make these models more lightweight without compromising too much on performance. But what do they entail, and how do they compare?</p>
+
+<div class="l-page" style="text-align:center;">
+  <img src="https://raw.githubusercontent.com/aadityaura/aadityaura.github.io/master/assets/img/Quantization.png" width="50%" style="margin-bottom: 12px; background-color: white;" />
+  <p style="text-align:center;">Quantization_vs_Distillation</p>
+</div>
+
+<h2 id="quantization-precision-for-efficiency">Quantization: Precision for Efficiency</h2>
+
+<p>Quantization is all about numeric precision. By reducing the bit-width of weights and activations in a model, one can shrink the model size, potentially increasing inference speed.</p>
+
+<p><strong>Math Behind Quantization:</strong></p>
+
+\[\begin{aligned}
+Q(r) &amp;= \left\lfloor \frac{r}{S} \right\rfloor - Z \\
+\text{where:} \\
+Q &amp; \text{is the quantization operator,} \\
+r &amp; \text{is a real-valued input (activation or weight),} \\
+S &amp; \text{is a real-valued scaling factor, and} \\
+Z &amp; \text{is an integer zero point.}
+\end{aligned}\]
+
+<p>This formula provides a straightforward and computationally efficient method for converting real numbers into quantized integers, making it a popular choice in many quantization schemes.</p>
+
+<h3 id="pros">Pros</h3>
+<ul>
+  <li><strong>Reduced Model Size:</strong> Shifting from 32-bit floating points to 8-bit integers, for instance, can reduce the model size fourfold.</li>
+  <li><strong>Speed and Hardware Compatibility:</strong> Low precision arithmetic can be more rapid on specific hardware accelerators.</li>
+  <li><strong>Memory Efficiency:</strong> Less data means reduced memory bandwidth requirements.</li>
+</ul>
+
+<h3 id="cons">Cons</h3>
+<ul>
+  <li><strong>Accuracy Trade-offs:</strong> Lower precision can sometimes affect model performance.</li>
+  <li><strong>Implementation Challenges:</strong> Quantization, particularly quantization-aware training, can be tricky.</li>
+</ul>
+
+<h2 id="distillation-from-teacher-to-student">Distillation: From Teacher to Student</h2>
+
+<p>Distillation involves training a smaller neural network, called the student, to mimic a larger pre-trained network, the teacher.</p>
+
+<p><strong>Math Behind Distillation:</strong></p>
+
+<p>The objective in distillation is to minimize the divergence between the teacher’s predictions and the student’s predictions. The most commonly used measure for this divergence is the Kullback-Leibler divergence:</p>
+
+\[\begin{aligned}
+L &amp;= \sum_i y_i^{(T)} \log\left(\frac{y_i^{(T)}}{y_i^{(S)}}\right) \\
+y_i^{(T)} &amp;\text{ is the output of the teacher model for class } i \\
+y_i^{(S)} &amp;\text{ is the output of the student model for class } i
+\end{aligned}\]
+
+<h3 id="pros-1">Pros</h3>
+<ul>
+  <li><strong>Size Flexibility:</strong> The student model’s architecture or size can be customized, offering a balance between size and performance.</li>
+  <li><strong>Performance Retention:</strong> A well-distilled student can achieve performance close to its teacher, despite being more compact.</li>
+</ul>
+
+<h3 id="cons-1">Cons</h3>
+<ul>
+  <li><strong>Retraining is a Must:</strong> Unlike quantization, distillation mandates retraining of the student model.</li>
+  <li><strong>Training Overheads:</strong> Time and computational resources are needed to train the student model.</li>
+</ul>
+
+<h2 id="in-practice">In Practice</h2>
+
+<p>Quantization often finds its place in hardware-specific deployments, while distillation is sought when one desires a lightweight model with performance close to a larger counterpart. In many scenarios, a combination of both – distilling a model and then quantizing it – can bring forth the benefits of both worlds. It’s essential to align the choice with the deployment needs, available resources, and acceptable trade-offs in terms of accuracy and efficiency.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[A dive into the techniques of quantizing and distilling deep learning models: What are they and how do they differ?]]></summary></entry><entry><title type="html">Desiderata</title><link href="https://aadityaura.github.io/blog/2020/Des/" rel="alternate" type="text/html" title="Desiderata" /><published>2020-10-10T00:00:00+00:00</published><updated>2020-10-10T00:00:00+00:00</updated><id>https://aadityaura.github.io/blog/2020/Des</id><content type="html" xml:base="https://aadityaura.github.io/blog/2020/Des/"><![CDATA[<p>GO PLACIDLY amid the noise and the haste,<br />
+and remember what peace there may be in silence.<br />
+As far as possible, without surrender, be on good terms with all persons.</p>
+
+<p>Speak your truth quietly and clearly; and listen to others,<br />
+even to the dull and the ignorant;<br />
+they too have their story.</p>
+
+<p>Avoid loud and aggressive persons; they are vexatious to the spirit.<br />
+If you compare yourself with others, you may become vain or bitter,<br />
+for always there will be greater and lesser persons than yourself.</p>
+
+<p>Enjoy your achievements as well as your plans.<br />
+Keep interested in your own career,<br />
+however humble; it is a real possession in the changing fortunes of time.</p>
+
+<p>Exercise caution in your business affairs,<br />
+for the world is full of trickery.<br />
+But let this not blind you to what virtue there is; many persons strive for high ideals,<br />
+and everywhere life is full of heroism.</p>
+
+<p>Be yourself.<br />
+Especially do not feign affection.<br />
+Neither be cynical about love; for in the face of all aridity and disenchantment,<br />
+it is as perennial as the grass.</p>
+
+<p>Take kindly the counsel of the years,<br />
+gracefully surrendering the things of youth.</p>
+
+<p>Nurture strength of spirit to shield you in sudden misfortune.<br />
+But do not distress yourself with dark imaginings.<br />
+Many fears are born of fatigue and loneliness.</p>
+
+<p>Beyond a wholesome discipline, be gentle with yourself.<br />
+You are a child of the universe no less than the trees and the stars;<br />
+you have a right to be here.</p>
+
+<p>And whether or not it is clear to you,<br />
+no doubt the universe is unfolding as it should.<br />
+Therefore be at peace with God, whatever you conceive Him to be.<br />
+And whatever your labors and aspirations, in the noisy confusion of life, keep peace in your soul.<br />
+With all its sham, drudgery and broken dreams,<br />
+it is still a beautiful world.<br />
+Be cheerful. Strive to be happy.</p>
+
+<p>By Max Ehrmann © 1927</p>
+
+<div class="l-page" style="text-align:center;">
+  <img src="/assets/img/blue_dot.jpg" width="100%" style="margin-bottom: 12px; background-color: white;" />
+  <p>A Pale Blue Dot
+</p>
+</div>]]></content><author><name></name></author><summary type="html"><![CDATA[A timeless meditation on life's profound truths]]></summary></entry><entry><title type="html">Loss Functions for Multi-label and Multi-class Classification</title><link href="https://aadityaura.github.io/blog/2019/Loss_Functions/" rel="alternate" type="text/html" title="Loss Functions for Multi-label and Multi-class Classification" /><published>2019-01-29T00:00:00+00:00</published><updated>2019-01-29T00:00:00+00:00</updated><id>https://aadityaura.github.io/blog/2019/Loss_Functions</id><content type="html" xml:base="https://aadityaura.github.io/blog/2019/Loss_Functions/"><![CDATA[<p>If you are using Tensorflow and confused with dozen of loss functions for multi-label and multi-class classification, Here you go : In both cases, classes should be one hot encoded</p>
+
+<h2 id="for-multi-label-classification">For Multi-label classification</h2>
+
+<ul>
+  <li><a href="https://www.tensorflow.org/api_docs/python/tf/nn/sigmoid_cross_entropy_with_logits">tf.nn.sigmoid_cross_entropy_with_logits</a></li>
+  <li><a href="https://www.tensorflow.org/api_docs/python/tf/nn/weighted_cross_entropy_with_logits">tf.nn.weighted_cross_entropy_with_logits</a></li>
+  <li><a href="https://www.tensorflow.org/api_docs/python/tf/contrib/losses/sigmoid_cross_entropy">tf.contrib.losses.sigmoid_cross_entropy</a></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="n">cross_entropy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="nf">sigmoid_cross_entropy_with_logits</span><span class="p">(</span><span class="n">logits</span><span class="o">=</span><span class="n">logits</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">targets</span><span class="p">,</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">))</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">reduce_sum</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">sigmoid</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">prediction</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">train_op</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="nc">AdamOptimizer</span><span class="p">(</span><span class="mf">0.001</span><span class="p">).</span><span class="nf">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h2 id="for-multi-class-classification">For Multi-class classification</h2>
+
+<ul>
+  <li><a href="https://www.tensorflow.org/api_docs/python/tf/nn/softmax_cross_entropy_with_logits">tf.nn.softmax_cross_entropy_with_logits</a></li>
+  <li><a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/nn/softmax_cross_entropy_with_logits_v2">tf.nn.softmax_cross_entropy_with_logits_v2</a></li>
+  <li><a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/losses/softmax_cross_entropy">tf.losses.softmax_cross_entropy</a></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cross_entropy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="nf">softmax_cross_entropy_with_logits_v2</span><span class="p">(</span>
+    <span class="n">logits</span><span class="o">=</span><span class="n">logits</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">one_hot_y</span>
+<span class="p">)</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">)</span>
+
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="nc">AdamOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span><span class="p">).</span><span class="nf">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+
+
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">predictions</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">true_labels</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">tru_pre</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">equal</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">y_true</span><span class="p">),</span> <span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">))</span>
+
+
+<span class="c1"># or
+</span>
+<span class="n">cross_entropy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="nf">softmax_cross_entropy_with_logits</span><span class="p">(</span><span class="n">logits</span><span class="o">=</span><span class="n">Ylogits</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">Y_</span><span class="p">)</span>
+<span class="n">cross_entropy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">)</span>
+
+<span class="c1"># accuracy of the trained model, between 0 (worst) and 1 (best)
+</span><span class="n">correct_prediction</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">equal</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">tf</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">Y_</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">correct_prediction</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">))</span>
+
+
+<span class="c1"># more detailed
+</span>
+<span class="n">cross_entropy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="nf">softmax_cross_entropy_with_logits_v2</span><span class="p">(</span>
+    <span class="n">logits</span><span class="o">=</span><span class="n">logits</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">targets</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">train</span><span class="p">.</span><span class="nc">AdamOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">).</span><span class="nf">minimize</span><span class="p">(</span><span class="n">oss</span><span class="p">)</span>
+
+<span class="n">logit_soft</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="nf">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">prob</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">logit_soft</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">predictions</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">targets</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">ground_truth</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="nf">equal</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">y_true</span><span class="p">),</span> <span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>There is still doubt between :</p>
+
+<ul>
+  <li><a href="https://www.tensorflow.org/api_docs/python/tf/nn/softmax_cross_entropy_with_logits">tf.nn.softmax_cross_entropy_with_logits</a></li>
+  <li><a href="https://www.tensorflow.org/api_docs/python/tf/compat/v1/nn/softmax_cross_entropy_with_logits_v2">tf.nn.softmax_cross_entropy_with_logits_v2</a></li>
+</ul>
+
+<p>From <a href="https://stats.stackexchange.com/questions/327348/how-is-softmax-cross-entropy-with-logits-different-from-softmax-cross-entropy-wi">Stack Exchange</a> here is really clear explanation</p>
+
+<p>In supervised learning, one doesn’t need to backpropagate to labels. They are considered fixed ground truth and only the weights need to be adjusted to match them.</p>
+
+<p>But in some cases, the labels themselves may come from a differentiable source, another network. One example might be <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">adversarial learning</a>. In this case, both networks might benefit from the error signal. That’s the reason why tf.nn.softmax_cross_entropy_with_logits_v2 was introduced</p>
+
+<p>Note that when the labels are the placeholders (which is also typical), there is no difference if the gradient through flows or not, because there are no variables to apply the gradient to.</p>
+
+<p>So when you are dealing with simple multi-class classification, Go with tf.nn.softmax_cross_entropy_with_logits_v2</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://stats.stackexchange.com/questions/327348/how-is-softmax-cross-entropy-with-logits-different-from-softmax-cross-entropy-wi">How is softmax_cross_entropy_with_logits different from softmax_cross_entropy_with_logits_v2?</a></li>
+  <li><a href="https://stats.stackexchange.com/questions/207794/what-loss-function-for-multi-class-multi-label-classification-tasks-in-neural-n/435713#435713">What loss function for multi-class, multi-label classification tasks in neural networks?</a></li>
+  <li><a href="https://stackoverflow.com/questions/47034888/how-to-choose-cross-entropy-loss-in-tensorflow">How to choose cross-entropy loss in TensorFlow?</a></li>
+  <li><a href="https://stackoverflow.com/questions/44674847/what-are-the-differences-between-all-these-cross-entropy-losses-in-keras-and-ten">What are the differences between all these cross-entropy losses in Keras and TensorFlow?</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Choosing the right TensorFlow loss for multi-label vs. multi-class tasks; A guide]]></summary></entry></feed>
